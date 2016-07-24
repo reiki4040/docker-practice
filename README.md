@@ -26,7 +26,7 @@ maybe shown fluentd startup logs (configuration and listen port...)
 access webapp
 
 ```
-curl https://{docker-machine ip}:8000/api/hello
+curl https://$(docker-machine ip):8001/api/hello
 ```
 
 then shown webapp logs (example)
@@ -37,4 +37,10 @@ then shown webapp logs (example)
 2016-07-23 09:56:35 +0000 docker.3e8a437d25caa93d4d29f52592c1be4ac08a7d5b7360431b3759f2f9180a575b: {"log":"logging my middleware start.","container_id":"3e8a437d25caa93d4d29f52592c1be4ac08a7d5b7360431b3759f2f9180a575b","container_name":"/docker_goweb-comp_1","source":"stdout"}
 2016-07-23 09:56:35 +0000 docker.3e8a437d25caa93d4d29f52592c1be4ac08a7d5b7360431b3759f2f9180a575b: {"container_id":"3e8a437d25caa93d4d29f52592c1be4ac08a7d5b7360431b3759f2f9180a575b","container_name":"/docker_goweb-comp_1","source":"stdout","log":"logging my middleware end."}
 2016-07-23 09:56:35 +0000 docker.3e8a437d25caa93d4d29f52592c1be4ac08a7d5b7360431b3759f2f9180a575b: {"log":"2016/07/23 09:56:35.120756 [3e8a437d25ca/sv2XrTFI1V-000001] Returning 200 in 143.439µs","container_id":"3e8a437d25caa93d4d29f52592c1be4ac08a7d5b7360431b3759f2f9180a575b","container_name":"/docker_goweb-comp_1","source":"stderr"}
+```
+
+stop containers
+
+```
+docker-compose stop
 ```
